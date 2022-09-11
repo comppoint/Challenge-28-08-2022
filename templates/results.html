@@ -27,7 +27,7 @@
          <th>Comment</th>
          <th>V_URL</th>
          <th>V_Thumbnail</th>
-         <th>s3_URL</th>
+         <!-- <th>s3_URL</th> -->
       </tr>
          {% for data in final_data %}
       <tr>
@@ -41,7 +41,7 @@
          <td>{{data['Comment']}}</td>
          <td>{{data['V_URL']}}</td>
          <td><img src="{{data['V_Thumbnail']}}"></img></td>
-         <td><a href="{{data['s3_URL']}}">Video s3 URL</a></td>
+         <!-- <td><a href="{{data['s3_URL']}}">Video s3 URL</a></td> -->
        {% endfor %}
    </table>
 </div>

@@ -262,10 +262,10 @@ def index():
             V_IDs=loding_in_SQL(SQL_data=SQL1)
             # DO NOT DELETE THIS SECTION    
             ######################################
-            print("*****************Uploade data in S3*****************")
-            s3_url_dict=s3_urls(V_IDs)
-            for i in range(len(Mongo1)):
-                Mongo1[i]['s3_URL']=s3_url_dict[Mongo1[i]['V_ID']]
+            # print("*****************Uploade data in S3*****************")
+            # s3_url_dict=s3_urls(V_IDs)
+            # for i in range(len(Mongo1)):
+            #     Mongo1[i]['s3_URL']=s3_url_dict[Mongo1[i]['V_ID']]
             print("*****************Loading into Mongodb*****************")
             loding_in_Mongo(Mongo1)
             print("*****************getting data from mondo*****************")
