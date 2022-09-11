@@ -35,6 +35,7 @@ if not os.path.exists(r"./video"):
 
 # for headless webdriver
 op = webdriver.ChromeOptions()
+op.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
 op.add_argument('headless')
 wd = webdriver.Chrome(executable_path=DRIVER_PATH,options=op)
 
