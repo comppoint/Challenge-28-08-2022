@@ -274,11 +274,12 @@ def index():
             return render_template('results.html', final_data=final_data.T.to_dict().values())
         except Exception as e:
             print('The Exception message is: ',e)
-            return 'something is wrong'
+            # return 'something is wrong'
+            return e
     else:
         return render_template('index.html')
 
 if __name__ == "__main__":
     #app.run(host='127.0.0.1', port=8001, debug=True)
     # app.run(host = "0.0.0.0",debug=True)
-    app.run(debug=True)
+    app.run(port=8000,host='0.0.0.0')
