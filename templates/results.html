@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" >
+   <style>
+      table, th, td {
+        border:1px solid black;
+      }
+      </style>
+<head>
+  <meta charset="UTF-8">
+  <title>Channel Data Page</title>
+</head>
+
+<body>
+
+  <div class="table-users">
+   <div class="header">Final_data</div>
+
+   <table cellspacing="0">
+      <tr>
+         <th>V_ID</th>
+         <th>Ch_Name</th>
+         <th>V_Title</th>
+         <th>Comments_count</th>
+         <th>likes</th>
+         <th>views</th>
+         <th>Commenter_Name</th>
+         <th>Comment</th>
+         <th>V_URL</th>
+         <th>V_Thumbnail</th>
+         <th>s3_URL</th>
+      </tr>
+         {% for data in final_data %}
+      <tr>
+         <td>{{data['V_ID']}}</td>
+         <td>{{data['Ch_Name']}}</td>
+         <td>{{data['V_Title']}}</td>
+         <td>{{data['Comments_count']}}</td>
+         <td>{{data['likes']}}</td>
+         <td>{{data['views']}}</td>
+         <td>{{data['Commenter_Name']}}</td>
+         <td>{{data['Comment']}}</td>
+         <td>{{data['V_URL']}}</td>
+         <td><img src="{{data['V_Thumbnail']}}"></img></td>
+         <td><a href="{{data['s3_URL']}}">Video s3 URL</a></td>
+       {% endfor %}
+   </table>
+</div>
+
+</body>
+
+</html>
