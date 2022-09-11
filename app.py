@@ -256,6 +256,7 @@ def index():
             try:
                 SQL1,Mongo1=Search(searchString,3)
             except Exception:
+                return Exception
                 return "Enter Correct URL"
             print("*****************Loading into SQL*****************")
             V_IDs=loding_in_SQL(SQL_data=SQL1)
