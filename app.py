@@ -39,7 +39,6 @@ op.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
 op.add_argument("--headless")
 op.add_argument("--disable-dev-shm-usage")
 op.add_argument("--no-sandbox")
-driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=chrome_options)
 
 wd = webdriver.Chrome(executable_path=DRIVER_PATH,options=op)
 
