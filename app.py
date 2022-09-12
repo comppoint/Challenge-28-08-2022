@@ -151,6 +151,7 @@ def Search(input_url,V_Count):
             Comments_Result.append({'V_ID':V_ID,'Commenter_Name':Commenter_Name,'Comment':Comment,'V_URL':V_URL,'V_Thumbnail':V_Thumbnail_src})
         i+=1
         bag+=1
+    wd.quit()
     return Search_Results,Comments_Result
 
 def loding_in_SQL(SQL_data):
